@@ -10,7 +10,9 @@
                 let resultEl = document.getElementById("result");
                 console.log(result);
                 for(var i = 0; i < result.length;i++){
-                    resultEl.innerHTML += "First Name: " + result[i].FirstName.toString() + "<br/>";
+                    resultEl.innerHTML += 
+                    result[i].FirstName.toString() + " " + result[i].LastName + "<br/>"
+                    
                 }
             });
         });

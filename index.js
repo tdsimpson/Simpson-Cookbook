@@ -25,7 +25,7 @@ app.on("ready", () => {
     mainWindow.once("ready-to-show", () => { mainWindow.show() })
 
     ipcMain.on("mainWindowLoaded", function () {
-        let result = knex.select("FirstName").from("User")
+        let result = knex.select("FirstName", "LastName").from("User")
         result.then(function (rows) {
             mainWindow.webContents.send("resultSent", rows);
         })
