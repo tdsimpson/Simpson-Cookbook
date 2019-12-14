@@ -6,9 +6,8 @@ const { app, BrowserWindow, Menu, ipcMain } = electron;
 let mainWindow;
 let addWindow;
 
-//SET ENVIRONMENT
-process.env.NODE_ENV = "production";
-
+//SET ENVIRONMENT (TOGGLE ON FOR PRODUCTION)
+// process.env.NODE_ENV = "production";
 
 //Listen for the app to be ready
 app.on('ready', function () {
