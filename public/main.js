@@ -11,15 +11,26 @@ let mainWindow;
 let imageWindow;
 let settingsWindow;
 
+
+const Datastore = require('nedb');
+const database = new Datastore('recipes.db');
+database.loadDatabase();
+
+database.insert({ name: "Taylor", status: "Rainbow" });
+database.insert({ name: "Daniel", status: "Train" });
+
+
 function createWindow() {
     mainWindow = new BrowserWindow({
         webPreferences: {
+            width: 1200,
+            height: 900,
             webSecurity: false,
             nodeIntegration: true
         }
     });
     //Window to fullscreen
-    mainWindow.maximize()
+    //mainWindow.maximize()
 
     imageWindow = new BrowserWindow({
         width: 600,
