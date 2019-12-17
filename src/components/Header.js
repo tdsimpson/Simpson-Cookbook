@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-export default function Header() {
-    return (
-        <div>
-            Simpson Cookbook Header
-        </div>
-    )
-}
+const Header = () => (
+    <header>
+        <h1>Simpson Coobook</h1>
+        <NavLink to="/" activeClassName="is-active" exact={true}>Home</NavLink>
+        <NavLink to="/create" activeClassName="is-active">Add Expense</NavLink>
+    </header>
+);
 
+export default Header;
 
