@@ -42,7 +42,7 @@
     "concurrently": "^5.0.1",
     "electron": "^22.0.0",
     "electron-builder": "^23.6.0",
-    "wait-on": "^3.3.0"
+    "wait-on": "^7.0.1"
   },
   "main": "public/main.js",
   "homepage": "./"
